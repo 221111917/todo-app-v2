@@ -1,15 +1,110 @@
-# Todo App with Docker Desktop
+# Todo App V2  
+![CI/CD](https://github.com/22111917/todo-app-v2/actions/workflows/ci-cd.yml/badge.svg)  
+![Python](https://img.shields.io/badge/Python-3.12-blue)  
+![Flask](https://img.shields.io/badge/Flask-3.0.3-green)  
+![Docker](https://img.shields.io/badge/Docker-Desktop-blue)  
 
-Aplikasi Todo List sederhana (Flask + Docker).
+> **Aplikasi Todo List Sederhana dengan Flask + Docker + CI/CD Otomatis**  
+> Tugas Akhir - Sistem Informasi  
+> **NIM:** 22111917  
+> **Nama:** [NAMA ANDA]  
+> **Kelas:** [KELAS ANDA]  
 
-## Cara Jalankan (Windows)
-1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
-2. Double-click `start-todo.bat`
-3. Buka: http://localhost:5000/todos
+---
 
-## API
-- GET `/todos`
-- POST `/todos` → `{"task": "Belajar"}`
-- DELETE `/todos/0`
+## Deskripsi Proyek
+Aplikasi web sederhana untuk mengelola **daftar tugas (Todo List)** dengan fitur:
+- Tambah tugas
+- Hapus tugas
+- Edit tugas (double-click)
+- Responsif (mobile & desktop)
+- Containerisasi dengan **Docker**
+- **CI/CD otomatis** via GitHub Actions
 
-CI/CD: ![CI](https://github.com/USERNAME/todo-app/actions/workflows/ci-cd.yml/badge.svg)
+---
+
+## Fitur Utama
+
+| Fitur | Keterangan |
+|------|-----------|
+| **Frontend** | HTML, Bootstrap 5, CSS Custom, JavaScript |
+| **Backend** | Python Flask (REST API) |
+| **Container** | Docker (python:3.12-slim) |
+| **CI/CD** | GitHub Actions (build, test API) |
+| **Kontainerisasi** | `docker build`, `docker run` |
+| **Otomasi Lokal** | `start-todo.bat` (menu 1-7) |
+
+---
+
+
+---
+
+## Cara Menjalankan (Windows)
+
+### Prasyarat
+1. **Install [Docker Desktop](https://www.docker.com/products/docker-desktop)**
+2. Pastikan Docker berjalan (ikon tray hijau)
+
+### Langkah-langkah
+1. **Download ZIP proyek**
+2. **Ekstrak ke folder**
+3. **Double-click `start-todo.bat`**
+4. Pilih menu:
+   - `[1]` → Rebuild & jalankan
+   - `[5]` → Lihat log
+   - `[6]` → Buka browser
+5. Buka: [http://localhost:5000](http://localhost:5000)
+
+> **Tidak perlu Python, Flask, atau Git!**
+
+---
+
+## API Endpoints
+
+| Method | Endpoint | Fungsi |
+|-------|----------|-------|
+| `GET` | `/` | Halaman utama |
+| `GET` | `/todos` | Ambil semua todo |
+| `POST` | `/todos` | Tambah todo (`{"task": "Belajar"}`) |
+| `DELETE` | `/todos/0` | Hapus todo index ke-0 |
+
+---
+
+## CI/CD dengan GitHub Actions
+
+### Workflow: `.github/workflows/ci-cd.yml`
+- **Trigger:** Push ke `main`
+- **Jobs:**
+  1. Checkout kode
+  2. Setup Python 3.12
+  3. Build Docker image
+  4. Jalankan container
+  5. Test API (`curl`)
+  6. Cleanup
+
+**Status:**  
+![CI/CD](https://github.com/22111917/todo-app-v2/actions/workflows/ci-cd.yml/badge.svg)
+
+---
+
+## Demo Aplikasi
+
+### Tampilan Desktop
+![Desktop](https://via.placeholder.com/800x450?text=Todo+App+Desktop)
+
+### Tampilan Mobile
+![Mobile](https://via.placeholder.com/400x800?text=Todo+App+Mobile)
+
+> *(Ganti dengan screenshot asli saat presentasi)*
+
+---
+
+## Kontribusi
+1. Fork repo
+2. Buat branch (`feature/nama-fitur`)
+3. Commit perubahan
+4. Push & buat Pull Request
+
+---
+
+## Lisensi
