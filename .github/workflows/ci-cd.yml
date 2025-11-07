@@ -1,0 +1,54 @@
+name: CI/CD Todo App
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install Flask==3.0.3
+
+      - name: Build Docker image
+        run: |
+          docker build -t todo-app:test .
+
+      - name: Run container in background
+        run: |
+          docker run -d -p 5000:5000 --name test-container todo-app:test
+
+      - name: Wait for app to start
+        run: sleep 15
+
+      - name: Test API - GET /
+        run: |
+          curl -f http://localhost:5000 || exit 1
+
+      - name: Test API - POST /todos
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d '{"task":"Test CI/CD"}' http://localhost:5000/todos || exit 1
+
+      - name: Test API - GET /todos
+        run: |
+          curl -f http://localhost:5000/todos | grep "Test CI/CD" || exit 1
+
+      - name: Cleanup
+        if: always()
+        run: |
+          docker stop test-container || true
+          docker rm test-container || true
