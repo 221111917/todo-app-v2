@@ -90,6 +90,9 @@ Aplikasi web sederhana untuk mengelola **daftar tugas (Todo List)** dengan fitur
 
 ### Tampilan Desktop
 <img width="922" height="599" alt="image" src="https://github.com/user-attachments/assets/6885c58d-b40b-4703-bbeb-22b0caffe610" />
+<img width="761" height="436" alt="image" src="https://github.com/user-attachments/assets/12bb514f-1187-430d-b33e-21cb9e1ea3e5" />
+<img width="780" height="351" alt="image" src="https://github.com/user-attachments/assets/0159ba16-699f-4b35-984e-78a4ead6526b" />
+
 
 
 
@@ -110,6 +113,7 @@ Constantin Anggriano (22111917)
 ---
 
 ## Lisensi
+
 
 
 
