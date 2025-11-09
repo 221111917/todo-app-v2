@@ -89,7 +89,8 @@ Aplikasi web sederhana untuk mengelola **daftar tugas (Todo List)** dengan fitur
 ## Demo Aplikasi
 
 ### Tampilan Desktop
-![Desktop](https://via.placeholder.com/800x450?text=Todo+App+Desktop)
+![Desktop]<img width="922" height="599" alt="image" src="https://github.com/user-attachments/assets/6885c58d-b40b-4703-bbeb-22b0caffe610" />
+
 
 ### Tampilan Mobile
 ![Mobile](https://via.placeholder.com/400x800?text=Todo+App+Mobile)
@@ -113,4 +114,5 @@ Constantin Anggriano (22111917)
 ---
 
 ## Lisensi
+
 
