@@ -5,10 +5,9 @@
 ![Docker](https://img.shields.io/badge/Docker-Desktop-blue)  
 
 > **Aplikasi Todo List Sederhana dengan Flask + Docker + CI/CD Otomatis**  
-> Tugas Akhir - Sistem Informasi  
-> **NIM:** 22111917  
-> **Nama:** [NAMA ANDA]  
-> **Kelas:** [KELAS ANDA]  
+> Tugas Akhir
+o	Nicholas Tio (22111917)
+o	Constantin Anggriano (221112405)
 
 ---
 
@@ -100,11 +99,18 @@ Aplikasi web sederhana untuk mengelola **daftar tugas (Todo List)** dengan fitur
 ---
 
 ## Kontribusi
-1. Fork repo
-2. Buat branch (`feature/nama-fitur`)
-3. Commit perubahan
-4. Push & buat Pull Request
+Nicholas Tio (22111917)
+•	Bertanggung jawab atas pengembangan backend API menggunakan Python dan Flask
+•	Merancang dan membuat Dockerfile untuk kontainerisasi aplikasi
+•	Mengimplementasikan logika untuk Tambah, Edit, dan Hapus tugas
+•	Membuat script start-todo.bat untuk otomatisasi lokal
+Constantin Anggriano (22111917)
+•	Bertanggung jawab atas desain UI/UX dan pengembangan frontend (HTML, Bootstrap, JS)
+•	Mengintegrasikan frontend dengan backend API
+•	Merancang dan mengimplementasikan alur kerja CI/CD menggunakan GitHub Actions
+•	Melakukan testing API pada pipeline CI
 
 ---
 
 ## Lisensi
+
